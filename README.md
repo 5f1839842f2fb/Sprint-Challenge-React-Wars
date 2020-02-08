@@ -30,11 +30,19 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What does it mean to _think_ in react?
 
+    Thinking in react is considering how you need to compose components in order to have them be able to access the downward flowing data
+
 - [ ] Describe state.
+
+    State is basically properties of a component that when changed trigger a re-render
 
 - [ ] Describe props.
 
+    Props is data being passed into a component
+
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+    Side effects are functions that trigger when the prop renders. You can specify them to only happen when props or a specific prop changes with a dependency array.
 
 ## Project Set Up
 

@@ -22,10 +22,22 @@ const CharactersContainer = () => {
   }, []);
 
   return <div className="CharactersContainer">
-      <Button onclick={() => {
-
+      <Button onClick={() => {
+          if (previousPage != null) {
+            Axios.get(previousPage).then(response => {
+                setCharactersData(response.data.results)
+            })
+          }
+         
       }}>Previous</Button>
-      <Button>Next</Button>
+      <Button onClick={() => {
+          if (nextPage != null) {
+            Axios.get(nextPage).then(response => {
+                setCharactersData(response.data.results)
+            })
+          }
+          
+      }}>Next</Button>
       {charactersData.map(element => {
           return <CharacterCard character={element} key={Math.random()}/>
       })}
