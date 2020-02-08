@@ -26,6 +26,8 @@ const CharactersContainer = () => {
           if (previousPage != null) {
             Axios.get(previousPage).then(response => {
                 setCharactersData(response.data.results)
+                setNextPage(response.data.next)
+                setPreviousPage(response.data.previous)
             })
           }
          
@@ -34,6 +36,8 @@ const CharactersContainer = () => {
           if (nextPage != null) {
             Axios.get(nextPage).then(response => {
                 setCharactersData(response.data.results)
+                setNextPage(response.data.next)
+                setPreviousPage(response.data.previous)
             })
           }
           
